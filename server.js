@@ -28,15 +28,19 @@ var app = express();
  
 // Database setup
  
-connection.query('USE snaptrading2', function (err) {
+connection.query('CREATE DATABASE IF NOT EXISTS snaptrading2', function (err) {
 if (err) throw err;
-connection.query('CREATE TABLE IF NOT EXISTS users('
-+ 'id INT NOT NULL AUTO_INCREMENT,'
-+ 'PRIMARY KEY(id),'
-+ 'name VARCHAR(30)'
-+ ')', function (err) {
-if (err) throw err;
-});
+	connection.query('USE snaptrading2', function (err) {
+	if (err) throw err;
+	connection.query('CREATE TABLE IF NOT EXISTS users('
+	+ 'id INT NOT NULL AUTO_INCREMENT,'
+	+ 'PRIMARY KEY(id),'
+	+ 'name VARCHAR(30)'
+	+ ')', 
+		function (err) {
+		if (err) throw err;
+		});
+	});
 });
  
 // Configuration
