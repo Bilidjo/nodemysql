@@ -19,7 +19,8 @@ connection.connect
       host: 'eu-cdbr-azure-west-b.cloudapp.net',
       port: '3306',
       user: 'b3596f3d55219d',
-      password: '4043ce20'
+      password: '4043ce20',
+      db:'snaptrading2'
   }
 );
 
@@ -28,8 +29,6 @@ var app = express();
  
 // Database setup
  
-connection.query('CREATE DATABASE IF NOT EXISTS snaptrading2', function (err) {
-if (err) throw err;
 connection.query('USE snaptrading2', function (err) {
 if (err) throw err;
 connection.query('CREATE TABLE IF NOT EXISTS users('
@@ -38,7 +37,6 @@ connection.query('CREATE TABLE IF NOT EXISTS users('
 + 'name VARCHAR(30)'
 + ')', function (err) {
 if (err) throw err;
-});
 });
 });
  
