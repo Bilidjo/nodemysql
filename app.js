@@ -16,10 +16,10 @@ var connection = new Client();
 connection.connect
 (
   {
-      host: '127.0.0.1',
-      port: '3307',
-      user: 'root',
-      password: 'pizzle'
+      host: 'eu-cdbr-azure-west-b.cloudapp.net',
+      port: '3306',
+      user: 'b3596f3d55219d',
+      password: '4043ce20'
   }
 );
 
