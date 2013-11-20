@@ -28,9 +28,9 @@ var app = express();
  
 // Database setup
  
-connection.query('CREATE DATABASE IF NOT EXISTS test', function (err) {
+connection.query('CREATE DATABASE IF NOT EXISTS snaptrading2', function (err) {
 if (err) throw err;
-connection.query('USE test', function (err) {
+connection.query('USE snaptrading2', function (err) {
 if (err) throw err;
 connection.query('CREATE TABLE IF NOT EXISTS users('
 + 'id INT NOT NULL AUTO_INCREMENT,'
