@@ -20,7 +20,7 @@ connection.connect
       port: '3306',
       user: 'b3596f3d55219d',
       password: '4043ce20',
-      database:'snaptrading2'
+      db:'snaptrading2'
   }
 );
 
