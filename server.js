@@ -19,8 +19,7 @@ connection.connect
       host: 'eu-cdbr-azure-west-b.cloudapp.net',
       port: '3306',
       user: 'b3596f3d55219d',
-      password: '4043ce20',
-      db:'snaptrading2'
+      password: '4043ce20'
   }
 );
 
